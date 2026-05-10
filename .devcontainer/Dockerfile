@@ -15,6 +15,6 @@ RUN apt-get update \
 
 RUN echo 'printf "\n\033[1;32m[g2ray]\033[0m Connection string:\nvless://2166797c-f912-4a24-a467-c5d0c216cc2d@94.130.50.12:443?encryption=none&security=tls&type=xhttp&mode=packet-up&sni=${CODESPACE_NAME}-443.app.github.dev&path=%2F#g2ray\n"' >> /etc/bash.bashrc
 
-EXPOSE 443
+EXPOSE 8698
 
 CMD ["/usr/local/bin/xray", "run", "-c", "/etc/xray/g2ray.json"]
