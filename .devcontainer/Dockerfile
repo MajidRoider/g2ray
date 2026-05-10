@@ -2,7 +2,7 @@ FROM debian:bookworm-slim
 
 ENV XRAY_VERSION=v26.3.27
 ENV MIN_PORT=3000
-ENV MAX_PORT=9000
+ENV MAX_PORT=50000
 
 COPY setup.sh /tmp/setup.sh
 COPY config.json /etc/xray/g2ray.json
@@ -79,6 +79,6 @@ RUN echo '#!/bin/bash' > /entrypoint.sh && \
 
 RUN chmod +x /entrypoint.sh
 
-EXPOSE 3000-9000
+EXPOSE 3000-50000
 
 CMD ["/entrypoint.sh"]
