@@ -5,7 +5,7 @@
   "inbounds": [
     {
       "tag": "vless-in",
-      "port": 443,
+      "port": 8698,
       "protocol": "vless",
       "settings": {
         "clients": [
